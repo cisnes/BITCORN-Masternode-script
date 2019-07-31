@@ -5,7 +5,7 @@ This guide will assist you in setting up a Bitcorn Masternode on a Linux Server 
 
 If you are setting up multiple masternodes, be sure to utilize our [Multinode tool](https://github.com/BITCORNProject/BITCORN-Multinode)
 
-If you require further assistance contact the support team @ [Discord](https://discord.gg/eJQJeBB)
+If you require further assistance contact the support team @ [Discord](https://discord.gg/KnKDTqP)
 
 ***
 ## Requirements
@@ -106,7 +106,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 6***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
 
-`wget -N https://raw.githubusercontent.com/BITCORNproject/BitCorn-MN-Script/master/bitcorn_install.sh`
+`wget -N https://raw.githubusercontent.com/BITCORNProject/BitCorn-MN-Script/master/bitcorn_install.sh`
 ***
 
 ***Step 7***
@@ -137,7 +137,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ## Section D: Preparing the Local wallet
 
 ***Step 1***
-* Download and install on the local PC / mac the Bitcorn wallet from [here](https://bitcorntimes.com/bitcorn/)
+* Download and install on the local PC / mac the Bitcorn wallet from [here](https://github.com/BITCORNProject/BITCORN/releases)
 ***
 
 ***Step 2***
@@ -204,7 +204,7 @@ Click "File Save"
 
 *You should see ***status 4***
 
-If you do, congratulations! You have now setup a masternode. If you do not, please contact [support] iamtheDESIKUKKAD#1000 on discord and and I will assist you.  
+If you do, congratulations! You have now setup a masternode. If you do not, please lodge a support ticket or ask for help in the [Discord](https://discord.gg/KnKDTqP) bitcorn support channel
 ***
 
 HAPPY REWARDS !!!
