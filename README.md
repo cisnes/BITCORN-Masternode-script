@@ -106,7 +106,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 6***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
 
-`wget -N https://raw.githubusercontent.com/BITCORNtimes/BitCorn-MN-Script/master/bitcorn_install.sh`
+`wget -N https://raw.githubusercontent.com/BITCORNproject/BitCorn-MN-Script/master/bitcorn_install.sh`
 ***
 
 ***Step 7***
