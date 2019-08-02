@@ -6,9 +6,9 @@ CONFIGFOLDER='/root/.bitcorn'
 COIN_DAEMON='bitcornd'
 COIN_CLI='bitcorn-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/BITCORNProject/BITCORN/releases/download/v1.2.0/Bitcorn-1.2.0-daemon-ubuntu_16.04.tar.gz'
+COIN_TGZ='https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_BOOTSTRAP='https://github.com/BITCORNProject/BITCORN/releases/download/v1.2.0/bootstrap.zip'
+COIN_BOOTSTRAP='https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/bootstrap.zip'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_NAME='bitcorn'
 COIN_PORT=12211
@@ -177,7 +177,11 @@ addnode=192.99.246.65
 addnode=51.75.171.74
 addnode=155.138.220.247
 addnode=149.56.246.65
-
+addnode=5.32.16.143
+addnode=149.28.249.148
+addnode=95.179.232.36
+addnode=207.148.79.82
+addnode=104.156.239.134
 
 
 EOF

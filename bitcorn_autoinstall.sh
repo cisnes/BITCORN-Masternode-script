@@ -56,7 +56,7 @@ fi
 genkey=$1
 clear
 
-echo -e "${GREEN} ------- Bitcorn MASTERNODE INSTALLER v1.0.0--------+
+echo -e "${GREEN} ------- Bitcorn MASTERNODE INSTALLER v1.3.0--------+
  |                                                  |
  |                                                  |::
  |       The installation will install and run      |::
@@ -184,8 +184,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/bitcorn*
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.2.0/Bitcorn-1.2.0-daemon-ubuntu_16.04.tar.gz
-tar -xzvf Bitcorn-1.2.0-daemon-ubuntu_16.04.tar.gz
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz
+tar -xzvf BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz
 sudo chmod -R 755 bitcorn-cli
 sudo chmod -R 755 bitcornd
 cp -p -r bitcornd /usr/local/bin
@@ -228,7 +228,7 @@ done
     bitcorn-cli stop
     sleep 5
 cd ~/.bitcorn/ && rm -rf blocks chainstate sporks zerocoin
-cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.2.0/bootstrap.zip
+cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/bootstrap.zip
 cd ~/.bitcorn/ && unzip bootstrap.zip	
 # Create bitcorn.conf
 cat <<EOF > ~/.bitcorn/bitcorn.conf
@@ -252,7 +252,16 @@ addnode=149.28.159.236
 addnode=149.28.164.188
 addnode=45.76.141.47
 addnode=149.28.212.243
-
+addnode=5.32.16.143
+addnode=149.28.249.148
+addnode=95.179.232.36
+addnode=207.148.79.82
+addnode=104.156.239.134
+addnode=5.32.16.143
+addnode=149.28.249.148
+addnode=95.179.232.36
+addnode=207.148.79.82
+addnode=104.156.239.134
  
 EOF
     bitcornd -daemon

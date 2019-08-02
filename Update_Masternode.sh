@@ -4,10 +4,10 @@ echo "We will update your Bitcorn Masternode right now"
 sudo apt-get -y install unzip
 bitcorn-cli stop
 rm -rf /usr/local/bin/bitcorn*
-mkdir CORNUpdated_1.2.0
-cd CORNUpdated_1.2.0
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.2.0/Bitcorn-1.2.0-daemon-ubuntu_16.04.tar.gz
-tar xzvf Bitcorn-1.2.0-daemon-ubuntu_16.04.tar.gz
+mkdir CORNUpdated_1.3.0
+cd CORNUpdated_1.3.0
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz
+tar xzvf BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz
 mv bitcornd /usr/local/bin/bitcornd
 mv bitcorn-cli /usr/local/bin/bitcorn-cli
 chmod +x /usr/local/bin/bitcorn*
@@ -15,7 +15,7 @@ rm -rf ~/.bitcorn/blocks
 rm -rf ~/.bitcorn/chainstate
 rm -rf ~/.bitcorn/peers.dat
 cd ~/.bitcorn/
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.2.0/bootstrap.zip
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/bootstrap.zip
 unzip bootstrap.zip
 echo "addnode=149.28.159.236 add" >> bitcorn.conf
 echo "addnode=149.28.164.188 add" >> bitcorn.conf
@@ -43,8 +43,14 @@ echo "addnode=192.99.246.65 add" >> bitcorn.conf
 echo "addnode=51.75.171.74 add" >> bitcorn.conf
 echo "addnode=155.138.220.247 add" >> bitcorn.conf
 echo "addnode=149.56.246.65 add" >> bitcorn.conf
+echo "addnode=5.32.16.143 add" >> bitcorn.conf
+echo "addnode=149.28.249.148 add" >> bitcorn.conf
+echo "addnode=95.179.232.36 add" >> bitcorn.conf
+echo "addnode=207.148.79.82 add" >> bitcorn.conf
+echo "addnode=104.156.239.134 add" >> bitcorn.conf
+
 cd ..
-cd CORNUpdated_1.2.0
+cd CORNUpdated_1.3.0
 bitcornd -daemon
 sleep 10
 bitcorn-cli addnode 149.28.159.236 onetry
@@ -73,6 +79,10 @@ bitcorn-cli addnode 192.99.246.65 onetry
 bitcorn-cli addnode 51.75.171.74 onetry
 bitcorn-cli addnode 155.138.220.247 onetry
 bitcorn-cli addnode 149.56.246.65 onetry
+bitcorn-cli addnode 5.32.16.143 onetry
+bitcorn-cli addnode 149.28.249.148 onetry
+bitcorn-cli addnode 95.179.232.36 onetry
+bitcorn-cli addnode 207.148.79.82 onetry
+bitcorn-cli addnode 104.156.239.134 onetry
 echo "Masternode Updated!"
 echo "Please wait few minutes and start your Masternode again on your Local Wallet"
-
