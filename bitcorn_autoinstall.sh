@@ -56,7 +56,7 @@ fi
 genkey=$1
 clear
 
-echo -e "${GREEN} ------- Bitcorn MASTERNODE INSTALLER v1.3.0--------+
+echo -e "${GREEN} ------- Bitcorn MASTERNODE INSTALLER v2.0.0--------+
  |                                                  |
  |                                                  |::
  |       The installation will install and run      |::
@@ -184,8 +184,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/bitcorn*
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz
-tar -xzvf BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.0/BITCORN-2.0-daemon-ubuntu_16.04.tar.gz
+tar -xzvf BITCORN-2.0-daemon-ubuntu_16.04.tar.gz
 sudo chmod -R 755 bitcorn-cli
 sudo chmod -R 755 bitcornd
 cp -p -r bitcornd /usr/local/bin
@@ -216,7 +216,7 @@ EOF
 sleep 7
 while true;do
     echo -e "${YELLOW}Generating masternode private key...${NC}"
-    genkey=$(bitcorn-cli masternode genkey)
+    genkey=$(bitcorn-cli createmasternodekey)
     if [ "$genkey" ]; then
         break
     fi
@@ -228,7 +228,7 @@ done
     bitcorn-cli stop
     sleep 5
 cd ~/.bitcorn/ && rm -rf blocks chainstate sporks zerocoin
-cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/bootstrap.zip
+cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.0/bootstrap.zip
 cd ~/.bitcorn/ && unzip bootstrap.zip	
 # Create bitcorn.conf
 cat <<EOF > ~/.bitcorn/bitcorn.conf
@@ -286,7 +286,7 @@ Use your mouse to copy the whole string above into the clipboard by
 tripple-click + single-click (Dont use Ctrl-C) and then paste it 
 into your ${GREEN}masternode.conf${NC} file and replace:
     ${GREEN}bitcorn_mn1${NC} - with your desired masternode name (alias)
-    ${GREEN}TxId${NC} - with Transaction Id from masternode outputs
+    ${GREEN}TxId${NC} - with Transaction Id from getmasternodeoutputs
     ${GREEN}TxIdx${NC} - with Transaction Index (0 or 1)
      Remember to save the masternode.conf and restart the wallet!
 To introduce your new masternode to the bitcorn network, you need to
@@ -300,7 +300,7 @@ echo -e "Wait for the node wallet on this VPS to sync with the other nodes
 on the network. Eventually the 'Is Synced' status will change
 to 'true', which will indicate a comlete sync, although it may take
 from several minutes to several hours depending on the network state.
-Your initial Masternode Status may read:
+Your initial getmasternodestatus may read:
     ${GREEN}Node just started, not yet activated${NC} or
     ${GREEN}Node  is not in masternode list${NC}, which is normal and expected.
 "
@@ -324,7 +324,7 @@ then start the bitcornd daemon back up:
 to stop:              ${GREEN}bitcorn-cli stop${NC}
 to start:             ${GREEN}bitcornd${NC}
 to edit:              ${GREEN}nano ~/.bitcorn/bitcorn.conf${NC}
-to check mn status:   ${GREEN}bitcorn-cli masternode status${NC}
+to check mn status:   ${GREEN}bitcorn-cli getmasternodestatus${NC}
 ========================================================================
 To monitor system resource utilization and running processes:
                    ${GREEN}htop${NC}

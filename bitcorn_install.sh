@@ -6,9 +6,9 @@ CONFIGFOLDER='/root/.bitcorn'
 COIN_DAEMON='bitcornd'
 COIN_CLI='bitcorn-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/BITCORN-1.3.0-daemon-ubuntu_16.04.tar.gz'
+COIN_TGZ='https://github.com/BITCORNProject/BITCORN/releases/download/v2.0/BITCORN-2.0-daemon-ubuntu_16.04.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_BOOTSTRAP='https://github.com/BITCORNProject/BITCORN/releases/download/v1.3.0/bootstrap.zip'
+COIN_BOOTSTRAP='https://github.com/BITCORNProject/BITCORN/releases/download/v2.0/bootstrap.zip'
 BOOTSTRAP_ZIP=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_NAME='bitcorn'
 COIN_PORT=12211
@@ -127,12 +127,12 @@ function create_key() {
    echo -e "${RED}$COIN_NAME server couldn not start. Check /var/log/syslog for errors.{$NC}"
    exit 1
   fi
-  COINKEY=$($COIN_PATH$COIN_CLI masternode genkey)
+  COINKEY=$($COIN_PATH$COIN_CLI createmasternodekey)
   if [ "$?" -gt "0" ];
     then
     echo -e "${RED}Wallet not fully loaded. Let us wait and try again to generate the GEN Key${NC}"
     sleep 30
-    COINKEY=$($COIN_PATH$COIN_CLI masternode genkey)
+    COINKEY=$($COIN_PATH$COIN_CLI createmasternodekey)
   fi
   $COIN_PATH$COIN_CLI stop
 fi
@@ -288,14 +288,14 @@ function important_information() {
  echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
  echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
  echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
- echo -e "${GREEN}MASTERNODE GENKEY is:${NC}${PURPLE}$COINKEY${NC}"
+ echo -e "${GREEN}createmasternodekey is:${NC}${PURPLE}$COINKEY${NC}"
  echo -e "${BLUE}================================================================================================================================"
  echo -e "${CYAN}Follow twitter to stay updated.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${CYAN}Ensure Node is fully SYNCED with BLOCKCHAIN.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
- echo -e "${GREEN}bitcorn-cli masternode status${NC}"
+ echo -e "${GREEN}bitcorn-cli getmasternodestatus${NC}"
  echo -e "${GREEN}bitcorn-cli getinfo${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
