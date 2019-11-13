@@ -184,8 +184,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/bitcorn*
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.0/BITCORN-2.0-daemon-ubuntu_16.04.tar.gz
-tar -xzvf BITCORN-2.0-daemon-ubuntu_16.04.tar.gz
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1/BITCORN-2.1-daemon-ubuntu_16.04.tar.gz
+tar -xzvf BITCORN-2.1-daemon-ubuntu_16.04.tar.gz
 sudo chmod -R 755 bitcorn-cli
 sudo chmod -R 755 bitcornd
 cp -p -r bitcornd /usr/local/bin
@@ -228,7 +228,7 @@ done
     bitcorn-cli stop
     sleep 5
 cd ~/.bitcorn/ && rm -rf blocks chainstate sporks zerocoin
-cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.0/bootstrap.zip
+cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1/bootstrap.zip
 cd ~/.bitcorn/ && unzip bootstrap.zip	
 # Create bitcorn.conf
 cat <<EOF > ~/.bitcorn/bitcorn.conf
