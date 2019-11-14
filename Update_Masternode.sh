@@ -4,10 +4,10 @@ echo "We will update your Bitcorn Masternode right now"
 sudo apt-get -y install unzip
 bitcorn-cli stop
 rm -rf /usr/local/bin/bitcorn*
-mkdir CORNUpdated_2.1
-cd CORNUpdated_2.1
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1/BITCORN-2.1-daemon-ubuntu_16.04.tar.gz
-tar xzvf BITCORN-2.1-daemon-ubuntu_16.04.tar.gz
+mkdir CORNUpdated_2.1.1
+cd CORNUpdated_2.1.1
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.1/BITCORN-2.1.1-daemon-ubuntu_16.04.tar.gz
+tar xzvf BITCORN-2.1.1-daemon-ubuntu_16.04.tar.gz
 mv bitcornd /usr/local/bin/bitcornd
 mv bitcorn-cli /usr/local/bin/bitcorn-cli
 chmod +x /usr/local/bin/bitcorn*
@@ -15,7 +15,7 @@ rm -rf ~/.bitcorn/blocks
 rm -rf ~/.bitcorn/chainstate
 rm -rf ~/.bitcorn/peers.dat
 cd ~/.bitcorn/
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1/bootstrap.zip
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.1/bootstrap.zip
 unzip bootstrap.zip
 echo "addnode=149.28.159.236 add" >> bitcorn.conf
 echo "addnode=149.28.164.188 add" >> bitcorn.conf
@@ -50,7 +50,7 @@ echo "addnode=207.148.79.82 add" >> bitcorn.conf
 echo "addnode=104.156.239.134 add" >> bitcorn.conf
 
 cd ..
-cd CORNUpdated_2.1
+cd CORNUpdated_2.1.1
 bitcornd -daemon
 sleep 10
 bitcorn-cli addnode 149.28.159.236 onetry
