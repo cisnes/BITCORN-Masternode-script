@@ -247,21 +247,6 @@ externalip=$publicip
 bind=$publicip
 masternodeaddr=$publicip
 masternodeprivkey=$genkey
-addnode=144.202.76.18
-addnode=149.28.159.236
-addnode=149.28.164.188
-addnode=45.76.141.47
-addnode=149.28.212.243
-addnode=5.32.16.143
-addnode=149.28.249.148
-addnode=95.179.232.36
-addnode=207.148.79.82
-addnode=104.156.239.134
-addnode=5.32.16.143
-addnode=149.28.249.148
-addnode=95.179.232.36
-addnode=207.148.79.82
-addnode=104.156.239.134
  
 EOF
     bitcornd -daemon
