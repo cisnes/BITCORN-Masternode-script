@@ -184,8 +184,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/bitcorn*
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.0/BITCORN-2.1.0-daemon-ubuntu_16.04.tar.gz
-tar -xzvf BITCORN-2.1.0-daemon-ubuntu_16.04.tar.gz
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.0/BITCORN-2.1.0-daemon.tar.gz
+tar -xzvf BITCORN-2.1.0-daemon.tar.gz
 sudo chmod -R 755 bitcorn-cli
 sudo chmod -R 755 bitcornd
 cp -p -r bitcornd /usr/local/bin

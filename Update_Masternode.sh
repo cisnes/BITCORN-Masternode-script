@@ -6,8 +6,8 @@ bitcorn-cli stop
 rm -rf /usr/local/bin/bitcorn*
 mkdir CORNUpdated_2.1.0
 cd CORNUpdated_2.1.0
-wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.0/BITCORN-2.1.0-daemon-ubuntu_16.04.tar.gz
-tar xzvf BITCORN-2.1.0-daemon-ubuntu_16.04.tar.gz
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.0/BITCORN-2.1.0-daemon.tar.gz
+tar xzvf BITCORN-2.1.0-daemon.tar.gz
 mv bitcornd /usr/local/bin/bitcornd
 mv bitcorn-cli /usr/local/bin/bitcorn-cli
 chmod +x /usr/local/bin/bitcorn*
