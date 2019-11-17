@@ -56,7 +56,7 @@ fi
 genkey=$1
 clear
 
-echo -e "${GREEN} ------- Bitcorn MASTERNODE INSTALLER v2.1.0--------+
+echo -e "${GREEN} ------- Bitcorn MASTERNODE INSTALLER v2.1.2--------+
  |                                                  |
  |                                                  |::
  |       The installation will install and run      |::
@@ -184,8 +184,8 @@ fi
 #Installing Daemon
 cd ~
 rm -rf /usr/local/bin/bitcorn*
-wget https://github.com/BITCORNProject/BITCORN/releases/download/2.1.0/BITCORN-2.1.0-daemon.tar.gz
-tar -xzvf BITCORN-2.1.0-daemon.tar.gz
+wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.2/BITCORN-v2.1.2-daemon.tar.gz
+tar -xzvf BITCORN-v2.1.2-daemon.tar.gz
 sudo chmod -R 755 bitcorn-cli
 sudo chmod -R 755 bitcornd
 cp -p -r bitcornd /usr/local/bin
@@ -228,7 +228,7 @@ done
     bitcorn-cli stop
     sleep 5
 cd ~/.bitcorn/ && rm -rf blocks chainstate sporks zerocoin
-cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/2.1.0/bootstrap.zip
+cd ~/.bitcorn/ && wget https://github.com/BITCORNProject/BITCORN/releases/download/v2.1.2/bootstrap.zip
 cd ~/.bitcorn/ && unzip bootstrap.zip	
 # Create bitcorn.conf
 cat <<EOF > ~/.bitcorn/bitcorn.conf
